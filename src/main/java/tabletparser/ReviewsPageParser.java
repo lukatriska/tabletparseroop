@@ -11,6 +11,8 @@ import java.util.List;
 
 public class ReviewsPageParser {
 
+
+
     public static List parse_reviews_page(String url) throws IOException {
         Document website = Jsoup.connect(url).get();
         List sentiments = new ArrayList();

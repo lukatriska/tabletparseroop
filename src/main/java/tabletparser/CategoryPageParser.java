@@ -18,8 +18,8 @@ public class CategoryPageParser {
         for (Element ele : elements) {
             String link = ele.getElementsByTag("a").attr("href");
 
-
-            parse_reviews(link + "comments/"); //final version
+            ReviewsParser rp = new ReviewsParser();
+            rp.parse_reviews(link + "comments/"); //final version
         }
     }
 }

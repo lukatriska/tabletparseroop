@@ -84,6 +84,7 @@ public class Main {
 //
     public static void main(String [] args) throws IOException {
         String url = "https://rozetka.com.ua/ua/tablets/c130309/filter/";
-        parse_category(url);
+        CategoryParser cp = new CategoryParser(url);
+        cp.parse_category(url);
     }
 }

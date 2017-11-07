@@ -27,7 +27,8 @@ public class ReviewsParser extends ReviewsPageParser{
 
         for (int i = 1; i < number_of_pages + 1; i++) {
             String pg = url + "page=" + i;
-            sentiments.add(parse_reviews_page(pg));
+            ReviewsPageParser prp = new ReviewsPageParser();
+            sentiments.add(prp.parse_reviews_page(pg));
         }
         if (!sentiments.isEmpty()) {
             System.out.println(sentiments);
